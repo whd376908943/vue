@@ -3,7 +3,7 @@
     <!-- 左侧栏 -->
     <index-sider></index-sider>
     <a-layout>
-      <a-layout-header style="background: #fff; padding: 0" />
+      <index-header></index-header>
       <a-layout-content style="margin: 0 16px">
       
         <a-breadcrumb style="margin: 16px 0">
@@ -23,9 +23,10 @@
 import indexSider from './sider'
 import indexFooter from './footer'
 import {mapState} from 'vuex'
+import indexHeader from './header'
 
 export default {
-  components: { indexSider,indexFooter },
+  components: { indexSider,indexFooter,indexHeader },
   computed: {
     ...mapState({
       breadcrumbList:state=>state.route.meta
